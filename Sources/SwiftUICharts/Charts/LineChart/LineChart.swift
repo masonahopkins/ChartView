@@ -6,12 +6,13 @@ public struct LineChart: View, ChartBase {
 
     @EnvironmentObject var data: ChartData
     @EnvironmentObject var style: ChartStyle
+    var showBackground: Bool = true
 
 	/// The content and behavior of the `LineChart`.
 	///
 	///
     public var body: some View {
-        Line(chartData: data, style: style)
+        Line(chartData: data, showBackground: showBackground, style: style)
     }
     
     public init() {}

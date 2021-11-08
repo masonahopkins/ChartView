@@ -4,12 +4,12 @@ import SwiftUI
 public struct Line: View {
     @EnvironmentObject var chartValue: ChartValue
     @ObservedObject var chartData: ChartData
+    var showBackground: Bool = true
 
     var style: ChartStyle
 
     @State private var showIndicator: Bool = false
     @State private var touchLocation: CGPoint = .zero
-    @State private var showBackground: Bool = true
     @State private var didCellAppear: Bool = false
 
     var curvedLines: Bool = true
