@@ -15,5 +15,7 @@ public struct LineChart: View, ChartBase {
         Line(chartData: data, showBackground: showBackground, style: style)
     }
     
-    public init() {}
+    public init(showBackground: Bool) {
+        self.showBackground = showBackground
+    }
 }
