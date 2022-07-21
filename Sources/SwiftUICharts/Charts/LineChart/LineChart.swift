@@ -6,7 +6,7 @@ public struct LineChart: View, ChartBase {
 
     @EnvironmentObject var data: ChartData
     @EnvironmentObject var style: ChartStyle
-    var showBackground: Bool = true
+    var showBackground: Bool
 
 	/// The content and behavior of the `LineChart`.
 	///
@@ -15,7 +15,7 @@ public struct LineChart: View, ChartBase {
         Line(chartData: data, showBackground: showBackground, style: style)
     }
     
-    public init(showBackground: Bool) {
+    public init(showBackground: Bool = true) {
         self.showBackground = showBackground
     }
 }
